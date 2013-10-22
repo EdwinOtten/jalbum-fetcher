@@ -64,13 +64,14 @@
 <div style="width: 400px; height: 100%">
 
 	<?php
-		$THISYEAR   =  date("Y") + 1;
-		$OUTPUT     =  "";
-		$albums    =  null;
+		$MAXYEAR	=  date("Y") + 1;
+		$LASTYEAR	=  date("Y") - 1;
+		$OUTPUT		=  "";
+		$albums		=  null;
 
-		while ( $THISYEAR >= 2013 ) {
+		while ( $MAXYEAR >= $LASTYEAR ) {
 		  
-		  $URL_PREFIX =  "http://avgroenester.nl/$THISYEAR/";
+		  $URL_PREFIX =  "http://avgroenester.nl/$MAXYEAR/";
 		  $path     =   $URL_PREFIX ."/album.rss";
 		  
 		  if ( fileExists($path) ) {
@@ -90,7 +91,7 @@
 			break;
 		  }
 		  
-		  $THISYEAR--;
+		  $MAXYEAR--;
 		}
 
 		print $OUTPUT;
