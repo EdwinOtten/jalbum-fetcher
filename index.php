@@ -118,12 +118,12 @@ function writeHTML($albums, $prefix, $alreadyWrittenCount) {
 		  	
 		  	if ( $i <= 4 ) {
 		  		
-		  		$album_info     =   explode('/album.rss" />', $album);
-		  		$album_info_arr    =    explode(" ", $album_info[0], 2);
+		  		$album_info      =   explode('/album.rss" />', $album);
+		  		$album_info_arr  =    explode(" ", $album_info[0], 2);
 		  		$album_date      =    $album_info_arr[0];
 		  		$album_name      =    $album_info_arr[1];
 		  		$album_url       =   $prefix . str_replace(" ","%20", $album_info[0]);
-		  		$album_thumb    =    $album_url . "/folderthumb.jpg";
+		  		$album_thumb     =    $album_url . "/folderthumb.jpg";
 		  		
 		  		$return      .=  '
 		  		<a href="'. $album_url .'" title="Fotoalbum: '. $album_name .'" target="_blank">
