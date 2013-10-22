@@ -67,7 +67,7 @@
 		$MAXYEAR	=  date("Y") + 1;
 		$LASTYEAR	=  date("Y") - 1;
 		$OUTPUT		=  "";
-		$albums		=  null;
+		$albums 	=  null;
 
 		while ( $MAXYEAR >= $LASTYEAR ) {
 			
