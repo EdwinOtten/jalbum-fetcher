@@ -145,7 +145,7 @@ function writeHTML($albums, $prefix, $alreadyWrittenCount) {
 		}
 
 		function fileExists($path){
-			return (@fopen($path,"r")==true);
+			return ( @fopen($path,"r")==true );
 		}
 
 		function getAlbums($path) {
